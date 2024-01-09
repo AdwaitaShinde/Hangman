@@ -3,15 +3,17 @@ from logo import hangman_stages, logo
 from hangman_words import word_list
 
 print(logo)
-# word_list = ["APPMILLERS", "UDEMY"]
+
 secret_word = random.choice(word_list)
 word_length =len(secret_word)
 guessed_letters = []
 blanks = []
 lives = 6
+
 for _ in range(word_length):
     blanks.append("_")
 end_game = False
+
 while not end_game:
     guess = input("Guess a letter: ").upper() 
     if guess in guessed_letters:
